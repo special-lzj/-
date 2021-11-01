@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>轮到{{user}}方执旗</div>
+    <Ground :user="user" :store="groundInfo" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Ground from './components/ground'
+import Store from './store'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Ground
+  },
+  data() {
+    return {
+      user: 'black',
+      groundInfo: undefined
+    }
+  },
+  mounted() {
+    this.groundInfo = new Store(this.afterWin)
+  },
+  methods: {
+    afterWin(user) {
+      window.alert(`${user}赢了`)
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: #aaa;
 }
 </style>
