@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div>轮到{{user}}方执旗</div>
+    <div>轮到{{user}}方执棋</div>
     <Ground :user="user" :store="groundInfo" />
   </div>
 </template>

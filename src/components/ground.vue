@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg">
     <column v-bind="$attrs" v-for="item in column" :key="item" :y="item" /> 
   </div>
 </template>
@@ -13,12 +13,11 @@ export default {
   },
   data() {
     return {
-      column:[0,1,2,3,4,5,6,7,8,9],
+      column:[0,1,2,3,4,5,6,7,8,9,10],
     }
   }
 }
 </script>
 
-<style lang="less" scoped>
-
+<style scoped>
 </style>

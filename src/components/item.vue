@@ -1,7 +1,7 @@
 <template>
   <div class="item" :style="isLimit">
     <div class="point" :style="bgStyle" @click="press" @mouseenter="onHover" @mouseleave="onLeave"></div>
-    <span class="cross" v-if="this.x!==9&&this.y!==9">{{x}} {{y}}</span>
+    <!-- <span class="cross" v-if="this.x!==9&&this.y!==9">{{x}} {{y}}</span> -->
   </div>  
 </template>
 
@@ -57,7 +57,7 @@ export default {
   },
   computed:{
     isLimit() {
-      if(this.x!==9&&this.y!==9) {
+      if(this.x!==10&&this.y!==10) {
         return {}
       }
       return {
