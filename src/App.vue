@@ -26,6 +26,7 @@ export default {
   methods: {
     afterWin(user) {
       window.alert(`${user}赢了`)
+      window.location.reload()
     }
   }
 }
